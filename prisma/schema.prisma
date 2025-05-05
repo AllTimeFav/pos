@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// Main Database (Global DB)
+model Store {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  active    Boolean  @default(true)
+
+  // Relationships
+  users    User[]
+  products Product[]
+  sales    Sales[]
+}
+
+model PasswordResetRequest {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status    String   @default("pending") // "pending" | "completed"
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id        String  @id @default(uuid())
+  storeId   String  // Store ID to link users to a specific store
+  store     Store   @relation(fields: [storeId], references: [id])
+  name      String
+  email     String  @unique
+  password  String
+  role      String  @default("cashier")
+  active    Boolean @default(true)
+  createdAt DateTime @default(now())
+  
+  sales    Sales[]
+  passwordResetRequest PasswordResetRequest?
+  @@unique([email, storeId])
+}
+
+
+model Product {
+  id          String  @id @default(uuid())
+  storeId     String  // Store ID to link products to a specific store
+  store       Store   @relation(fields: [storeId], references: [id])
+  name        String
+  price       Float
+  stock       Int
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+
+model Sales {
+  id        String   @id @default(uuid())
+  storeId   String   // Store ID to link sales to a specific store
+  store     Store    @relation(fields: [storeId], references: [id])
+  userId    String?  
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  total     Float
+  items     Json
+}

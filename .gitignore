@@ -1,0 +1,14 @@
+# Prisma and database related
+/prisma/migrations/
+/prisma/*.db
+/prisma/*.db-journal
+
+# Seed scripts and environment files
+/app/scripts/seed.ts
+/app/scripts/seed.js
+
+node_modules
+
+/.cache
+/build
+.env
