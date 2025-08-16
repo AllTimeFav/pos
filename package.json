@@ -13,9 +13,10 @@
   },
   "dependencies": {
     "@prisma/client": "^6.3.1",
-    "@remix-run/node": "^2.15.3",
-    "@remix-run/react": "^2.15.2",
+    "@remix-run/node": "^2.16.7",
+    "@remix-run/react": "^2.16.7",
     "@remix-run/serve": "^2.15.2",
+    "@vercel/remix": "^2.16.7",
     "bcryptjs": "^2.4.3",
     "cookie": "^1.0.2",
     "cookie-session": "^2.1.0",
@@ -32,7 +33,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.15.2",
+    "@remix-run/dev": "^2.16.7",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.8",
     "@types/node": "^22.15.3",
