@@ -1,5 +1,4 @@
 import {
-  Link,
   Outlet,
   useLocation,
   useLoaderData,
@@ -10,18 +9,14 @@ import {
 import { useState } from "react";
 import {
   LogOut,
-  LayoutDashboard,
   Package,
   ShoppingCart,
   Users,
   BarChart,
-  MoveLeftIcon,
-  MoveRightIcon,
   Home,
   Briefcase,
   User,
   UserCheck,
-  DollarSign,
   Menu,
   X,
 } from "lucide-react";

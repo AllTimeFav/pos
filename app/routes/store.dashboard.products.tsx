@@ -3,7 +3,6 @@ import { useLoaderData, Link, Form } from "@remix-run/react";
 import { prisma } from "~/utils/prisma.server";
 import { useState } from "react";
 import { ActionFunction } from "@remix-run/node";
-import { get } from "mongoose";
 import { getUserFromSession } from "~/utils/session.server";
 
 export const loader: LoaderFunction = async ({ request }) => {
