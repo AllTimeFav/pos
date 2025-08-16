@@ -27,13 +27,6 @@ export default defineConfig({
     exclude: ["lucide-react"],
   },
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          icons: ['lucide-react'],
-        },
-      },
-    },
     chunkSizeWarningLimit: 1000,
   },
   server: {
