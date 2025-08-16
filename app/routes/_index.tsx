@@ -9,7 +9,7 @@ import { prisma } from "~/utils/prisma.server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { getUserFromSession, sessionCookie } from "~/utils/session.server";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "~/components/Icons";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 // Smooth scrolling function

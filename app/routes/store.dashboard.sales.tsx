@@ -1,6 +1,6 @@
 import { useLoaderData } from "@remix-run/react";
 import { useState } from "react";
-import { Search, ArrowDownUp, Calendar } from "lucide-react";
+import { Search, ArrowDownUp, Calendar } from "~/components/Icons";
 import { LoaderFunction } from "@remix-run/node";
 import { getUserFromSession } from "~/utils/session.server";
 import { prisma } from "~/utils/prisma.server";

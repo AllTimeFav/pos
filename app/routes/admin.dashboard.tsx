@@ -17,8 +17,7 @@ import {
   Briefcase,
   Shield,
   HomeIcon,
-  
-} from "lucide-react";
+} from "~/components/Icons";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import { LoaderFunction, json } from "@remix-run/node";

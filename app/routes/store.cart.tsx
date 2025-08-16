@@ -4,7 +4,7 @@ import { prisma } from "~/utils/prisma.server";
 import type { LoaderFunction, ActionFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getUserFromSession } from "~/utils/session.server";
-import { Minus, Moon, Plus, ShoppingCart, Sun } from "lucide-react";
+import { Minus, Moon, Plus, ShoppingCart, Sun } from "~/components/Icons";
 
 interface Product {
   id: string;

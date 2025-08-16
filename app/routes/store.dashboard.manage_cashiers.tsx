@@ -8,7 +8,7 @@ import {
 import { json, redirect } from "@remix-run/node";
 import { prisma } from "~/utils/prisma.server";
 import { getUserFromSession } from "~/utils/session.server";
-import { Plus } from "lucide-react";
+import { Plus } from "~/components/Icons";
 import PasswordModal from "~/components/Modal";
 import bcrypt from "bcryptjs";
 

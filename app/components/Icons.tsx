@@ -19,7 +19,9 @@ import {
   FiMinus, 
   FiMoon, 
   FiSun,
-  FiMessageCircle
+  FiMessageCircle,
+  FiShoppingBag,
+  FiShield
 } from "react-icons/fi";
 
 // Export with lucide-react compatible names
@@ -42,4 +44,7 @@ export const Plus = FiPlus;
 export const Minus = FiMinus;
 export const Moon = FiMoon;
 export const Sun = FiSun;
-export const MessageCirclePlus = FiMessageCircle; 
+export const MessageCirclePlus = FiMessageCircle;
+export const Store = FiShoppingBag;
+export const Shield = FiShield;
+export const HomeIcon = FiHome; 
