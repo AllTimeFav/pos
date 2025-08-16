@@ -24,7 +24,7 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   optimizeDeps: {
-    exclude: ["lucide-react"],
+    // No exclusions needed
   },
   build: {
     chunkSizeWarningLimit: 1000,
