@@ -5,10 +5,5 @@
   "framework": "remix",
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "build/server/index.js": {
-      "maxDuration": 30
-    }
   }
 } 
